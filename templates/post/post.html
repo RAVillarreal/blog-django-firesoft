@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include 'post/head.html' %}
+
+  <body>
+
+    {% include 'post/header.html' %}
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            {{ object.body | safe }}
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    {% include 'post/footer.html' %}
+
+    {% include 'post/js.html' %}
+
+  </body>
+
+</html>
